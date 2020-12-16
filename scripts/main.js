@@ -33,8 +33,3 @@ function setup(){
 window.onload = checkip(); setup();
 
 
-
-
-
-
-
