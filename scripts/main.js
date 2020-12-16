@@ -9,7 +9,7 @@ function checkip(){
   let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
   let ip = data.match(ipRegex)[0];
   ip = ip.toString()
-  if (ip == "74.71.211.122"){
+  if (ip == "74.71.211.152"){
     //It is Coder2195! Don't ban him!
   } else {
     alert('It\'s private! Coder2195 is developing!')
@@ -31,6 +31,9 @@ function setup(){
 }
 
 window.onload = checkip(); setup();
+
+
+
 
 
 
