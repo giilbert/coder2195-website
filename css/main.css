@@ -3,3 +3,35 @@ body{
   background-image: url("../img/lines-of-code.jpg");
   background-repeat: repeat;
 }
+#bar{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  left: 0%;
+  bottom: 0px;
+  background-image: url("../img/bluecode.png")
+}
+a{
+  position: relative;
+  display: inline-block;
+}
+a span{
+  visibility: hidden;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  border:3px dotted black;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color:rgb(17, 89, 49);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+a:hover span{
+  visibility: visible;
+  opacity: 1;
+}
