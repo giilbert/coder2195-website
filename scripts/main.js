@@ -1,5 +1,3 @@
-const {Howl, Howler} = require('howler')
-..
 function checkip(){
 //ban anyone from entering while developing
   function text(url) {
@@ -33,14 +31,3 @@ function setup(){
 
 window.onload = checkip(); setup();
 
-var musicnew Howl({
-  src: '../snd/calm.mp3',
-  autoplay: true,
-  loop: true,
-  volume: 0.5,
-  onend: function() {
-    console.log('Finished!');
-  }
-});
-
-""
