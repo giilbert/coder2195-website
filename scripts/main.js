@@ -1,12 +1,10 @@
 async function checkip() {
   // ban anyone from entering while developing
   let res = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
-  let data = await res.text();//make my site coder2195.web.app 
+  let data = await res.text();
   let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/;
   let ip = data.match(ipRegex)[0];
   ip = ip.toString();
-  
-
   // ban if IP doesnt match
   if (ip !== "74.71.211.152") {
     alert("It's private! Coder2195 is developing!");
