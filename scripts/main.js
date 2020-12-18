@@ -1,27 +1,22 @@
 async function checkip() {
   // ban anyone from entering while developing
-  function text(url) {
-    return fetch(url).then(res => res.text());
+  let res = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+  let data = await res.text();//make my site coder2195.web.app 
+  let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/;
+  let ip = data.match(ipRegex)[0];
+  ip = ip.toString();
+  
+
+  // ban if IP doesnt match
+  if (ip !== "74.71.211.152") {
+    alert("It's private! Coder2195 is developing!");
+    window.close();
   }
-  
-// i'll export this to github
-  
-  text("https://www.cloudflare.com/cdn-cgi/trace").then(data => {
-    let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/;
-    let ip = data.match(ipRegex)[0];
-    ip = ip.toString();
+}
 
-    // ban if IP doesnt match
-    if (ip !== "74.71.211.152") {
-      alert("It's private! Coder2195 is developing!");
-      window.close();
-    }
-  });
-} w
-
-async function setup() {
+function setup() {
   //hide certain elements
-  $("#snap").css("display", "none") ;
+  $("#snap").css("display", "none");
   $("#python").css("display", "none");
   $("#other").css("display", "none");
   //show certain elements
