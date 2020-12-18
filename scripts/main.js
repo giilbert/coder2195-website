@@ -103,5 +103,20 @@ const langdata = {
       "hi":"मेरे Snap खेल",
       "el":"Τα Snap παιχνίδια μου"
     },
+    "python": {
+      "en":"My Python Games",
+      "ch":"我 Python 的游戏",
+      "fr":"Mes Jeux Python",
+      "sp":"Mis Juegos Python",
+      "pt":"Meus Jogos Python",
+      "nl":"My Python-spellen",
+      "de":"Meine Python Spiele",
+      "ar":"ألعابي Python",
+      "ru":"Мои игры Python",
+      "ko":"내 Python 게임",
+      "jp":"私の Python ゲーム",
+      "hi":"मेरे Python खेल",
+      "el":"Τα Python παιχνίδια μου"
+    },
   }
 }
