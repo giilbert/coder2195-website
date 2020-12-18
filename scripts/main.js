@@ -29,11 +29,6 @@ function setup(){
   $('#bar').css("display", "block")
 }
 
-window.onload = () => {
-  checkip()
-  setup()
-}
-
 /*!lang: english (en), chinese (ch), french (fr), spanish (sp) 
  portuguese (pt), dutch (nl), german (de), arabic (ar)
  russian (ru), korean (ko), japanese (jp), hindi (hi), greek (el)
@@ -120,3 +115,16 @@ const langdata = {
     },
   }
 }
+
+function changelang(currentlang){
+  document.title = langdata["head"]["title"][currentlang]
+  //change title!
+  $('title').text(langdata["body"]["title"][currentlang])
+  //change "welcome to my site" to their language
+}
+
+window.onload = () => {
+  checkip()
+  setup()
+}
+
