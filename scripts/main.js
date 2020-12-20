@@ -7,8 +7,10 @@ async function checkip() {
   ip = ip.toString();
   // ban if IP doesnt match
   if (ip !== "74.71.211.152") {
-    alert("It's private! Coder2195 is developing!");
     window.close();
+    // in case close() doesn't work
+    document.write("It's private! Coder2195 is developing!");
+    
   }
 }
 
